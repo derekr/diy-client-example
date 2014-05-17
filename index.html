@@ -1,0 +1,11 @@
+<script type="text/javascript" charset="utf-8" src="diy.dist.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+    var diy = diyClient();
+
+    diy('/makers/diy', function (err, body) {
+        if (err) return alert('Error fetching maker data.');
+
+        console.log(body.response);
+    });
+</script>
