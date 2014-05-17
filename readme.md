@@ -2,7 +2,7 @@
 
 # Getting Started w/ diy-client
 
-[`diy-client`](https://github.com/diy/diy-client) is the official js client
+[diy-client](https://github.com/diy/diy-client) is the official js client
 for the DIY API. With it you can fetch DIY data such as maker and skill info.
 See [docs.diy.org](http://docs.diy.org) for all available resources.
 
@@ -17,7 +17,7 @@ For simplicity I am explaining how to use the standalone version.
 
 # Initial Steps
 
-Create an HTML document and reference the `diy.dist.js` file.
+Create a HTML document and reference the `diy.dist.js` file.
 
 ```html
 <script type="text/javascript" charset="utf-8" src="diy.dist.js"></script>
