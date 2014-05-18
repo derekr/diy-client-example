@@ -74,6 +74,65 @@ diy('/makers/drk', function (err, body) {
 
 If there is an error we `return` early and alert that an error occured.
 
+If everything went ok `body.response` should contain an object literal that
+looks like this:
+
+```json
+{
+    "id": 32581,
+    "stamp": "2013-01-03T12:56:15.000Z",
+    "url": "drk",
+    "nickname": "drk",
+    "email": "d*****@m*.com",
+    "type": {
+        "moderator": true,
+        "adult": false,
+        "subscriber": false,
+        "verified": true,
+        "suspended": false
+    },
+    "avatar": {
+        "id": 93,
+        "icon": {
+            "url": "https://d3hv8qdd474bjn.cloudfront.net/drk_icon.png",
+            "mime": "image/jpeg",
+            "width": 30,
+            "height": 28
+        },
+        "small": {
+            "url": "https://d3hv8qdd474bjn.cloudfront.net/drk_small.png",
+            "mime": "image/jpeg",
+            "width": 90,
+            "height": 90
+        },
+        "medium": {
+            "url": "https://d3hv8qdd474bjn.cloudfront.net/drk_medium.png",
+            "mime": "image/jpeg",
+            "width": 160,
+            "height": 150
+        },
+        "large": {
+            "url": "https://d3hv8qdd474bjn.cloudfront.net/drk_large.png",
+            "mime": "image/jpeg",
+            "width": 460,
+            "height": 431
+        }
+    },
+    "portfolio": {
+        "bio": "I write stuff.",
+        "foreground": "#ffffff",
+        "background": "#ffd531"
+    },
+    "stats": {
+        "projects": 53,
+        "achievements": 27,
+        "patches": 6,
+        "following": 111,
+        "followers": 1099
+    }
+}
+```
+
 That is the most basic way to fetch data from the DIY API! Once
 you have this down try and guess how to fetch some skill data. If you need
 some help figuring out the skill uri check [docs.diy.org](http://docs.diy.org).
