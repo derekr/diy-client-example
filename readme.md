@@ -3,17 +3,8 @@
 # Getting Started w/ diy-client
 
 [diy-client](https://github.com/diy/diy-client) is the official js client
-for the DIY API. With it you can fetch DIY data such as maker and skill info.
-See [docs.diy.org](http://docs.diy.org) for all available resources.
-
-`diy-client` works both on the server in Node and in browsers that support
-[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS).
-
-In the browser you can bundle `diy-client` w/
-[browserify](https://github.com/substack/node-browserify) or use the standalone
-`diy.dist.js` file included here.
-
-For simplicity I am explaining how to use the standalone version.
+for the DIY API. With it you can interact with DIY data such as maker
+and skill info.
 
 # Initial Steps
 
@@ -32,15 +23,11 @@ to make requests to the DIY API.
 </script>
 ```
 
-The initial call to `diyClient` allows you to set a custom API `host` and `version`
-number, but most of the time you just want the default `http://api.diy.org` and
-current API version.
-
 # Requests
 
-Now that we have a `diy` function we can fetch something like maker data. A call
-to `diy` requires a route or uri as the first argument and a callback function
-as the second argument.
+Now that we have a `diy` function we can ask the API for some data… Let's try
+`maker` data. A call to `diy` requires **2 arguments**: a route or `uri` as the first argument and
+a `callback` function as the second argument.
 
 ```html
 <script type="text/javascript">
@@ -54,12 +41,12 @@ as the second argument.
 
 Now we're cookin'! :egg:
 
-The uri in this case is the `/makers/:url` resource. You can replace `:url`
+The `uri` in this case is the `/makers/:url` resource. You can replace `:url`
 with any existing maker url like `/makers/astro` to get their DIY data.
 
-The callback function will be called when the request to the DIY API is done.
+The `callback` function will be called when the request to the DIY API is done.
 
-All the response data can be found in the `body.response` variable, but first
+All of the response data can be found in the `body.response` variable, but first
 you'll want to make sure there wasn't an error while requesting.
 
 So we can beef up the callback function to be a little more tolerant:
@@ -133,9 +120,9 @@ looks like this:
 }
 ```
 
-That is the most basic way to fetch data from the DIY API! Once
+That is the most basic way to get data from the DIY API! Once
 you have this down try and guess how to fetch some skill data. If you need
-some help figuring out the skill uri check [docs.diy.org](http://docs.diy.org).
+some help figuring out the skill `uri` check [docs.diy.org](http://docs.diy.org).
 
 # More Requests
 
@@ -144,3 +131,33 @@ Coming soon!
 * How to add data to the API
 * How to authenticate so you can post project from the api
 * Search!
+
+# FAQ
+
+**Why do I have to call a `diyClient()` function to get the other function named `diy`?**
+
+The initial call to `diyClient` allows you to set a custom API `host` and `version`
+number, but most of the time you just want the default `http://api.diy.org` and
+current API version. This is more of a convenience for DIY internally as
+it allows us to easily swap out versions of the API while tesitng.
+
+**What kind of data can I play with?**
+
+You can see all the different types of data in the DIY API here:
+See [docs.diy.org](http://docs.diy.org).
+
+**Is there another way to install `diy-client`?**
+
+Yup! `diy-client` is available in [npm](https://www.npmjs.org/package/diy) and
+can be installed by running:
+
+```shell
+npm install diy
+```
+
+`diy-client` works both on the server in Node and in browsers that support
+[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS).
+
+In the browser you can bundle `diy-client` w/
+[browserify](https://github.com/substack/node-browserify) or use the standalone
+`diy.dist.js` file included here.
