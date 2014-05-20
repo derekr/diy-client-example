@@ -6,6 +6,13 @@
 for the DIY API. With it you can interact with DIY data such as maker
 and skill info.
 
+For this guide you'll need some basic
+[Frontend Dev](https://diy.org/skills/frontenddev)
+skills like
+[JavaScript](https://diy.org/skills/frontenddev/challenges/1057/flash-colors-with-javascript-in-jsfiddle)
+and
+[HTML](https://diy.org/skills/frontenddev/challenges/1028/create-a-basic-html-website-with-jsfiddle).
+
 You can download the files for this guide
 [here](https://github.com/derekr/diy-client-example/archive/master.zip).
 Once you have the files just open `index.html` in a browser and check
