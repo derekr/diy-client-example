@@ -6,6 +6,12 @@
 for the DIY API. With it you can interact with DIY data such as maker
 and skill info.
 
+You can download the files for this guide
+[here](https://github.com/derekr/diy-client-example/archive/master.zip).
+Once you have the files just open `index.html` in a browser and check
+[the console](https://diy.org/skills/frontenddev/challenges/1030/find-bugs-with-web-inspector)
+for output.
+
 # Initial Steps
 
 Create a HTML document and reference the `diy.dist.js` file.
@@ -119,6 +125,9 @@ looks like this:
     }
 }
 ```
+
+By this point your HTML file should look close to the included
+[index.html](https://github.com/derekr/diy-client-example/blob/master/index.html) file.
 
 That is the most basic way to get data from the DIY API! Once
 you have this down try and guess how to fetch some skill data. If you need
